@@ -1,0 +1,305 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Nov 29, 2023, 8:25:10 PM
+    Author     : Admin
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background: url('img/49460559-10115915-image-a-66-1634829449223.jpg') ;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+section {
+    background: transparent; 
+    width: auto;
+    height: 100%;
+    border: 2px solid #3399ff;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-height: 85vh;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+p{
+    font-size: 30px;
+}
+
+.hello {
+    position: fixed; /* Đặt hello thành fixed để giữ ở vị trí cố định khi cuộn */
+    font-size: 23px;
+    color: #000000;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Đặt z-index cao hơn so với khung search */
+}
+
+.hello p{
+    margin-left: 10px;
+    font-size: 35px;
+
+}
+.avatar-container {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.avatar {
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#userInfo {
+    position: fixed;
+    top: 110px;
+    left: 10px;
+    transform: translate(0%, -50%);
+    background: transparent;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    text-align: left;
+    backdrop-filter: blur(5px);
+
+}
+
+
+#userInfo p {
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+#logoutLink {
+    margin-top: 10px;
+}
+
+.hello:hover #userInfo {
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+header{
+    top: 20px;
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+}
+h1{
+    color: antiquewhite;
+    font-size: 40px;
+}
+h2{
+    font-size: 15px;
+    color: #00ff00;
+    text-align: center;
+    border-bottom: 20px;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -5px;
+    font-size: 15px;
+}
+
+.table-container {
+    max-height: 550px; 
+    max-width: 1100px;
+    overflow-y: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+table thead {
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+
+
+table th {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+table tbody tr {
+    background: transparent;
+}
+
+table td {
+    height: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+
+table td input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+table td img{
+    height: 100px;
+    width: 100px;
+}
+
+
+
+button{
+    width: 100%;
+    height: 25px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.Buy-button{
+    display: flex;
+    width: 40%;
+}
+
+.Buy-button button{
+    margin: 5px;
+}
+button:hover {
+    background: #ccc;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100000000;
+    text-align: center;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100000;
+    transform: translate(-50%, -50%);
+}
+
+.confirm_box {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: fixed;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+.confirm_dialog{
+    height: 100px;
+    width: 400px;
+    background-color: #ddd;
+    border: 4px solid #000000;
+}
+
+.confirm_box p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.modal-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.modal-buttons button{
+    margin: 10px;
+    width: 100px;
+}
+
+.noti{
+    color: #00ff00;
+}
+
+
+

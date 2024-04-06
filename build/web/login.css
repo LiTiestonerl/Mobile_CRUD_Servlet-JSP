@@ -1,0 +1,143 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Nov 29, 2023, 6:44:55 PM
+    Author     : Admin
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('img/49460559-10115915-image-a-66-1634829449223.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border-color: #6699ff;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 50px;
+    color: #6699ff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.error {
+    color: #ff0066;
+    animation: fadeInOut 2.3s ease-in-out forwards;
+}
+
+.success {
+    color: #6699ff;
+    animation: fadeInOut 2.3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Mặt định ở trạng thái ẩn */
+    }
+    10%,
+    90% {
+        opacity: 1; /* Hiển thị trong khoảng thời gian 2.3s */
+    }
+    100% {
+        opacity: 0; /* Mất đi ở cuối thời gian 2.3s */
+    }
+}
+
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #6699ff;
+    font-size: 25px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -5px;
+    font-size: 15px;
+}
+
+.inputbox input{
+    width: 90%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    padding: 0 35px 0 5px;
+    color: #ccc;
+    border-bottom: 2px solid #6699ff;
+}
+
+input[type = "submit"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #6699ff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover {
+    background: #ddd;
+}
+
+.register {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}

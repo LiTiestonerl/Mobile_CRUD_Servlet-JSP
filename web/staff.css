@@ -1,0 +1,368 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Dec 4, 2023, 11:57:16 AM
+    Author     : Admin
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background: url('img/49460559-10115915-image-a-66-1634829449223.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+section {
+    width: auto;
+    height: auto;
+    border: 2px solid #6699ff;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-height: 140vh;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.hello {
+    position: fixed; /* Đặt hello thành fixed để giữ ở vị trí cố định khi cuộn */
+    font-size: 23px;
+    color: #000000;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Đặt z-index cao hơn so với khung search */
+}
+
+.hello p{
+    margin-left: 10px;
+    font-size: 35px;
+
+}
+.avatar-container {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.avatar {
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#userInfo {
+    position: fixed;
+    top: 110px;
+    left: 10px;
+    transform: translate(0%, -50%);
+    background: transparent;
+    padding: 10px;
+    border: 2px solid #6699ff;
+    border-radius: 5px;
+    display: none;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    z-index: 3; /* Đặt z-index cao hơn so với khung search */
+}
+
+#userInfo p {
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #6699ff;
+    border-radius: 5px;
+}
+
+#logoutLink {
+    margin-top: 15px;
+    margin-left: 4px;
+    color: #6699ff;
+    
+}
+
+.hello:hover #userInfo {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #000000; 
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    color: #000000;
+    background-color: #6699ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+header:hover {
+    background-color: blue;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+input:focus ~ label,
+input:valid ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -5px;
+    font-size: 15px;
+}
+
+.table-container {
+    max-height: 550px; 
+    max-width: 1100px;
+    overflow-y: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+table thead {
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+
+
+table th {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+table tbody tr {
+    background: transparent;
+}
+
+table td {
+    height: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+
+table td input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: blue;
+    text-align: center;
+}
+
+table td img{
+    height: 100px;
+    width: 100px;
+}
+
+
+.search-box {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6699ff;
+    margin-bottom: 20px;
+    font-size: 25px;
+    position: relative;
+    z-index: 2; /* Đặt z-index cho khung search */
+}
+
+
+.search-box input {
+    width: 70%; /* Giảm chiều rộng của input để tạo không gian cho nút tìm kiếm */
+    height: 25px;
+    border: 1px solid #000000;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+    padding: 5px;
+    color: #6699ff;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+}
+
+.search-box button {
+    width: 50%; /* Giữ lại một phần của khung để nút tìm kiếm */
+    height: 30px;
+    border-radius: 50px;
+    background: #6699ff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.search-box a button{
+    width:  100%;
+}
+
+
+
+button:hover {
+    background: #ccc;
+}
+
+/* Table Button Styling */
+table button {
+    width: 100%;
+    height: 25px;
+    border-radius: 40px;
+    background: #6699ff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.8em; /* Điều chỉnh kích thước font */
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000; /* Đặt một giá trị z-index cao hơn so với khung search */
+    text-align: center;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000000;
+    transform: translate(-50%, -50%);
+}
+
+.form-value{
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+}
+.form-value h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+h1 {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+}
+.inputbox {
+    position: relative;
+    margin: 20px 0;
+    width: 310px;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 25px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    padding: 0 35px 0 5px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+button{
+    width: 50%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #ccc;
+}
